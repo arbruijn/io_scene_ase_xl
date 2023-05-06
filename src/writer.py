@@ -110,10 +110,10 @@ class ASEWriter(object):
         if len(ase.materials) > 0:
             material_list = root.add_command('MATERIAL_LIST')
             material_list.push_child('MATERIAL_COUNT').push_datum(len(ase.materials))
-            material_node = material_list.push_child('MATERIAL')
-            material_node.push_child('NUMSUBMTLS').push_datum(len(ase.materials))
+            #material_node = material_list.push_child('MATERIAL')
+            #material_node.push_child('NUMSUBMTLS').push_datum(len(ase.materials))
             for material_index, material in enumerate(ase.materials):
-                submaterial_node = material_node.push_child('SUBMATERIAL')
+                submaterial_node = material_list.push_child('MATERIAL')
                 submaterial_node.push_datum(material_index)
                 submaterial_node.push_child('MATERIAL_NAME').push_datum(material)
                 diffuse_node = submaterial_node.push_child('MAP_DIFFUSE')
@@ -122,6 +122,7 @@ class ASEWriter(object):
                 diffuse_node.push_child('UVW_V_OFFSET').push_datum(0.0)
                 diffuse_node.push_child('UVW_U_TILING').push_datum(1.0)
                 diffuse_node.push_child('UVW_V_TILING').push_datum(1.0)
+                diffuse_node.push_child('BITMAP').push_datum(material + '.tga')
 
         for geometry_object in ase.geometry_objects:
             geomobject_node = root.add_command('GEOMOBJECT')

@@ -4,7 +4,7 @@ This is a Blender addon allowing you to export static meshes to the now-defunct 
 
 Adjusted to generate ASE files compatible with d2x-xl / dxx-redux.
 
-Originally by DarklightGames https://github.com/DarklightGames/io_scene_ase
+Originally by Colin Basnett (DarklightGames) https://github.com/DarklightGames/io_scene_ase
 
 ## Installation
 

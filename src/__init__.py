@@ -1,7 +1,7 @@
 bl_info = {
-    'name': 'ASCII Scene Export (ASE)',
-    'description': 'Export ASE (ASCII Scene Export) files',
-    'author': 'Colin Basnett (Darklight Games)',
+    'name': 'ASCII Scene Export XL (ASE)',
+    'description': 'Export ASE (ASCII Scene Export) files for d2x-xl',
+    'author': 'Arne de Bruijn',
     'version': (1, 2, 1),
     'blender': (2, 90, 0),
     'location': 'File > Import-Export',
@@ -32,7 +32,7 @@ classes = (
 
 
 def menu_func_export(self, context):
-    self.layout.operator(exporter.ASE_OT_ExportOperator.bl_idname, text='ASCII Scene Export (.ase)')
+    self.layout.operator(exporter.ASE_OT_ExportOperator.bl_idname, text='ASCII Scene Export XL (.ase)')
 
 
 def register():
