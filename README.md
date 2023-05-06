@@ -1,8 +1,14 @@
-# io_scene_ase
+# io_scene_ase_xl
 
 This is a Blender addon allowing you to export static meshes to the now-defunct ASE (ASCII Scene Export) format still in use in legacy programs like Unreal Tournament 2004.
 
-Check out [this video](https://www.youtube.com/watch?v=gpmBxCGHQjU) on how to install and use the addon.
+Adjusted to generate ASE files compatible with d2x-xl / dxx-redux.
 
-Resources:
-* https://wiki.beyondunreal.com/Legacy:ASE_File_Format
+Originally by DarklightGames https://github.com/DarklightGames/io_scene_ase
+
+## Installation
+
+- In Blender, go to Edit -> Preferences... -> Add-ons -> Install.. and browse to the zip (unextracted)
+- Check the checkmark that appears for Import-Export: ASCII Scene Export (ASE)
+- Close the window
+- You should now have the option File -> Export -> ASCII Scene Export (.ase)
